@@ -36,7 +36,7 @@ export function FeaturesSection() {
   const headingLines = t("heading").split("\n");
 
   return (
-    <section ref={ref} className="py-32 px-6 relative" id="features">
+    <section ref={ref} className="py-20 lg:py-24 px-6 relative" id="features">
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-100/10 to-gray-50 dark:from-gray-950 dark:via-gray-900/10 dark:to-gray-950" />
 
       <div className="max-w-7xl mx-auto relative z-10">

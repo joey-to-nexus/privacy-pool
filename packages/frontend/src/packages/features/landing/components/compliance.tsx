@@ -60,7 +60,7 @@ export function Compliance() {
   ];
 
   return (
-    <section id="compliance" className="relative py-32 px-6 overflow-hidden">
+    <section id="compliance" className="relative py-20 lg:py-24 px-6 overflow-hidden">
       {/* Background glows */}
       <div className="absolute inset-0">
         <motion.div

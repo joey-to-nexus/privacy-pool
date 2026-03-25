@@ -22,7 +22,7 @@ export function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="py-32 px-6 lg:px-8 relative overflow-hidden"
+      className="py-20 lg:py-24 px-6 lg:px-8 relative overflow-hidden"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[120px] bg-gray-300/10 dark:bg-gray-500/5" />
 
