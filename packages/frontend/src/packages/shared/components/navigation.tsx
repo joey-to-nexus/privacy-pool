@@ -81,7 +81,7 @@ export function Navigation() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-sm tracking-wide transition-colors text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
+                  className="text-sm tracking-wide transition-colors min-h-[44px] flex items-center text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
                 >
                   {item.label}
                 </button>
@@ -89,7 +89,7 @@ export function Navigation() {
                 <Link
                   key={item.id}
                   href={`/#${item.id}`}
-                  className="text-sm tracking-wide transition-colors text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
+                  className="text-sm tracking-wide transition-colors min-h-[44px] flex items-center text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
                 >
                   {item.label}
                 </Link>
@@ -97,7 +97,7 @@ export function Navigation() {
             )}
             <Link
               href="/docs"
-              className="text-sm tracking-wide transition-colors text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
+              className="text-sm tracking-wide transition-colors min-h-[44px] flex items-center text-gray-600 hover:text-gray-900 dark:text-white/70 dark:hover:text-gray-300"
             >
               {t("docs")}
             </Link>
@@ -112,7 +112,7 @@ export function Navigation() {
           >
             <Link
               href="/app"
-              className="text-sm tracking-wide font-medium transition-all duration-300 relative group bg-gradient-to-r from-amber-600 to-amber-700 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent"
+              className="text-sm tracking-wide font-medium transition-all duration-300 relative group min-h-[44px] flex items-center bg-gradient-to-r from-amber-600 to-amber-700 dark:from-amber-400 dark:to-amber-500 bg-clip-text text-transparent"
             >
               {t("app")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full bg-gradient-to-r from-amber-600 to-amber-700 dark:from-amber-400 dark:to-amber-500" />
