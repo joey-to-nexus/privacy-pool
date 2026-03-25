@@ -89,7 +89,7 @@ export function Compliance() {
               {t("label")}
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl tracking-tight mb-6 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-balance mb-6 text-gray-900 dark:text-white">
             {t("heading")}
             <br />
             <span className="text-gradient">{t("headingHighlight")}</span>
@@ -115,7 +115,7 @@ export function Compliance() {
                 <div className="inline-flex p-4 mb-6 bg-gradient-to-br from-gray-500 to-gray-600 dark:from-gray-600 dark:to-gray-700">
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl mb-2 text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-medium mb-2 text-gray-900 dark:text-white">
                   {pillar.title}
                 </h3>
                 <p className="text-sm mb-4 tracking-wide text-gray-600 dark:text-gray-400">

@@ -49,7 +49,7 @@ export function FeaturesSection() {
           <div className="text-sm tracking-widest uppercase mb-4 text-gray-600 dark:text-gray-400">
             {t("label")}
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance mb-6 text-gray-900 dark:text-white">
             {headingLines[0]}
             <br />
             <span className="text-gradient">{headingLines[1]}</span>
@@ -72,7 +72,7 @@ export function FeaturesSection() {
                     <feature.icon className="w-6 h-6 stroke-[1.5] text-amber-600 dark:text-amber-400" />
                   </div>
                 </div>
-                <h3 className="text-2xl mb-4 transition-colors duration-300 text-gray-900 group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-300">
+                <h3 className="text-2xl font-medium mb-4 transition-colors duration-300 text-gray-900 group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-300">
                   {feature.title}
                 </h3>
                 <p className="leading-relaxed text-gray-600 dark:text-white/60">

@@ -37,7 +37,7 @@ export function HowItWorks() {
           <div className="text-sm tracking-widest uppercase mb-4 text-gray-600 dark:text-gray-400">
             {t("label")}
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-gray-900 dark:text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-balance mb-6 text-gray-900 dark:text-white">
             {headingLines[0]}
             <br />
             <span className="text-gradient">{headingLines[1]}</span>
@@ -60,7 +60,7 @@ export function HowItWorks() {
                   </div>
                 </div>
                 <div className="flex-1 pt-2">
-                  <h3 className="text-2xl mb-3 text-gray-900 dark:text-white">
+                  <h3 className="text-2xl font-medium mb-3 text-gray-900 dark:text-white">
                     {step.title}
                   </h3>
                   <p className="leading-relaxed mb-4 text-gray-600 dark:text-white/60">
