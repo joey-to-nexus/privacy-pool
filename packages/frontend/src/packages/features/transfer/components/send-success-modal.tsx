@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Check, X, ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SUPPORTED_CHAIN } from "~shared/config/chains";
+import { useFocusTrap } from "~shared/hooks/use-focus-trap";
 
 interface SendSuccessModalProps {
   txHash: string | null;
@@ -14,6 +15,8 @@ interface SendSuccessModalProps {
 
 export function SendSuccessModal({ txHash, onClose }: SendSuccessModalProps) {
   const t = useTranslations("sendSuccess");
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(dialogRef, !!txHash);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -44,6 +47,10 @@ export function SendSuccessModal({ txHash, onClose }: SendSuccessModalProps) {
           onClick={onClose}
         >
           <motion.div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="send-success-title"
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -53,7 +60,8 @@ export function SendSuccessModal({ txHash, onClose }: SendSuccessModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 p-1 text-gray-500 hover:text-gray-800 dark:text-white/50 dark:hover:text-white"
+              aria-label={t("done")}
+              className="absolute top-3 right-3 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-500 hover:text-gray-800 dark:text-white/50 dark:hover:text-white"
             >
               <X className="w-5 h-5" />
             </button>
@@ -62,7 +70,7 @@ export function SendSuccessModal({ txHash, onClose }: SendSuccessModalProps) {
               <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-green-500/20 flex items-center justify-center">
                 <Check className="w-6 h-6 text-green-500" />
               </div>
-              <h4 className="text-lg font-medium">{t("title")}</h4>
+              <h4 id="send-success-title" className="text-lg font-medium">{t("title")}</h4>
             </div>
 
             <a

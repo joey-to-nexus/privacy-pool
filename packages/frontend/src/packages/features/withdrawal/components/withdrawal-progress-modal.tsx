@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Check, X, Loader2, AlertCircle, ExternalLink, ShieldCheck } from "lucide-react";
@@ -8,6 +8,7 @@ import { useTranslations } from "next-intl";
 import type { WithdrawalProgress, ProofStep } from "~shared/types/withdrawal";
 import { SUPPORTED_TOKENS } from "~shared/config/tokens";
 import { SUPPORTED_CHAIN } from "~shared/config/chains";
+import { useFocusTrap } from "~shared/hooks/use-focus-trap";
 
 interface WithdrawalProgressModalProps {
   progress: WithdrawalProgress;
@@ -19,6 +20,7 @@ export function WithdrawalProgressModal({
   onClose,
 }: WithdrawalProgressModalProps) {
   const t = useTranslations("withdrawal");
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   const ALL_STEPS: { step: ProofStep; label: string }[] = [
     { step: "merkle", label: t("stepMerkle") },
@@ -40,6 +42,7 @@ export function WithdrawalProgressModal({
   const isVisible =
     isWithdrawing || completedTxHashes.length > 0 || error !== null;
   const isSuccess = !isWithdrawing && !error && completedTxHashes.length > 0;
+  useFocusTrap(dialogRef, isVisible);
   const activeStepIdx = currentStep ? ALL_STEPS.findIndex((s) => s.step === currentStep.step) : -1;
 
   const handleKeyDown = useCallback(
@@ -72,6 +75,10 @@ export function WithdrawalProgressModal({
           onClick={isWithdrawing ? undefined : onClose}
         >
           <motion.div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="withdrawal-progress-title"
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 10 }}
@@ -82,13 +89,14 @@ export function WithdrawalProgressModal({
             {!isWithdrawing && (
               <button
                 onClick={onClose}
-                className="absolute top-3 right-3 p-1 text-gray-500 hover:text-gray-800 dark:text-white/50 dark:hover:text-white"
+                aria-label={t("close")}
+                className="absolute top-3 right-3 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-500 hover:text-gray-800 dark:text-white/50 dark:hover:text-white"
               >
                 <X className="w-5 h-5" />
               </button>
             )}
 
-            <h4 className="text-lg font-medium mb-1 text-center">
+            <h4 id="withdrawal-progress-title" className="text-lg font-medium mb-1 text-center">
               {error
                 ? t("failed")
                 : isSuccess
