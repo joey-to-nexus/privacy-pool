@@ -94,7 +94,7 @@ export function Compliance() {
             <br />
             <span className="text-gradient">{t("headingHighlight")}</span>
           </h2>
-          <p className="text-lg max-w-3xl mx-auto text-gray-600 dark:text-white/60">
+          <p className="text-lg max-w-3xl mx-auto text-gray-600 dark:text-white/70">
             {t("subtitle")}
           </p>
         </motion.div>
@@ -121,7 +121,7 @@ export function Compliance() {
                 <p className="text-sm mb-4 tracking-wide text-gray-600 dark:text-gray-400">
                   {pillar.subtitle}
                 </p>
-                <p className="mb-4 leading-relaxed text-gray-600 dark:text-white/60">
+                <p className="mb-4 leading-relaxed text-gray-600 dark:text-white/70">
                   {pillar.desc}
                 </p>
                 <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
@@ -148,7 +148,7 @@ export function Compliance() {
           <h3 className="text-3xl mb-6 text-center text-gray-900 dark:text-white">
             {t("privacyFirstHeading")} <span className="text-gradient">{t("privacyFirstHighlight")}</span>
           </h3>
-          <p className="text-lg text-center mb-16 max-w-3xl mx-auto text-gray-600 dark:text-white/60">
+          <p className="text-lg text-center mb-16 max-w-3xl mx-auto text-gray-600 dark:text-white/70">
             {t("privacyFirstDesc").split("\n").map((line: string, i: number) => (
               <span key={i}>
                 {i > 0 && <br />}
@@ -202,7 +202,7 @@ export function Compliance() {
                 <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-800">
                   <div className="flex items-start gap-3">
                     <Shield className="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-600 dark:text-gray-400" />
-                    <p className="text-sm text-gray-600 dark:text-white/60">
+                    <p className="text-sm text-gray-600 dark:text-white/70">
                       {t("publicNote")}
                     </p>
                   </div>
@@ -255,7 +255,7 @@ export function Compliance() {
                 <div className="mt-6 pt-6 border-t border-gray-300 dark:border-gray-700">
                   <div className="flex items-start gap-3">
                     <Lock className="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-600 dark:text-gray-400" />
-                    <p className="text-sm text-gray-600 dark:text-white/60">
+                    <p className="text-sm text-gray-600 dark:text-white/70">
                       {t("operatorNote")}
                     </p>
                   </div>
@@ -340,7 +340,7 @@ export function Compliance() {
                   (text, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
-                      <p className="text-sm text-gray-600 dark:text-white/60">
+                      <p className="text-sm text-gray-600 dark:text-white/70">
                         {text}
                       </p>
                     </div>
@@ -383,7 +383,7 @@ export function Compliance() {
                       {t("operatorApproval")}
                     </p>
                   </div>
-                  <p className="text-xs ml-7 text-gray-600 dark:text-white/60">
+                  <p className="text-xs ml-7 text-gray-600 dark:text-white/70">
                     {t("operatorApprovalDesc")}
                   </p>
                   <code className="text-xs font-mono ml-7 block mt-2 text-gray-700 dark:text-gray-300">
@@ -397,7 +397,7 @@ export function Compliance() {
                       {t("timeoutTitle")}
                     </p>
                   </div>
-                  <p className="text-xs ml-7 text-gray-600 dark:text-white/60">
+                  <p className="text-xs ml-7 text-gray-600 dark:text-white/70">
                     {t("timeoutDesc")}
                   </p>
                   <code className="text-xs font-mono ml-7 block mt-2 text-gray-700 dark:text-gray-300">
@@ -440,7 +440,7 @@ export function Compliance() {
                       <h4 className="text-lg mb-2 transition-colors duration-300 text-gray-900 group-hover:text-gray-600 dark:text-white dark:group-hover:text-gray-400">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-gray-600 dark:text-white/60">
+                      <p className="text-sm text-gray-600 dark:text-white/70">
                         {item.desc}
                       </p>
                     </div>
@@ -463,7 +463,7 @@ export function Compliance() {
                   <h4 className="text-sm font-medium mb-2 text-gray-700 dark:text-gray-400">
                     {t("securityGuaranteeTitle")}
                   </h4>
-                  <p className="text-sm leading-relaxed text-gray-600 dark:text-white/60">
+                  <p className="text-sm leading-relaxed text-gray-600 dark:text-white/70">
                     {t("securityGuaranteeNote")}
                   </p>
                 </div>

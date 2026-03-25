@@ -89,7 +89,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.8 }}
-          className="text-xl md:text-2xl mb-12 tracking-wide text-gray-600 dark:text-white/60"
+          className="text-xl md:text-2xl mb-12 tracking-wide text-gray-600 dark:text-white/70"
         >
           {t("subheading")}
         </motion.p>

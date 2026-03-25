@@ -75,7 +75,7 @@ export function FeaturesSection() {
                 <h3 className="text-2xl font-medium mb-4 transition-colors duration-300 text-gray-900 group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-300">
                   {feature.title}
                 </h3>
-                <p className="leading-relaxed text-gray-600 dark:text-white/60">
+                <p className="leading-relaxed text-gray-600 dark:text-white/70">
                   {feature.description}
                 </p>
               </div>

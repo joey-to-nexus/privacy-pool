@@ -63,7 +63,7 @@ export function HowItWorks() {
                   <h3 className="text-2xl font-medium mb-3 text-gray-900 dark:text-white">
                     {step.title}
                   </h3>
-                  <p className="leading-relaxed mb-4 text-gray-600 dark:text-white/60">
+                  <p className="leading-relaxed mb-4 text-gray-600 dark:text-white/70">
                     {step.description}
                   </p>
                 </div>
@@ -83,7 +83,7 @@ export function HowItWorks() {
               <h3 className="text-xl mb-2 text-gray-900 dark:text-white">
                 {t("securityTitle")}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-white/60">
+              <p className="text-sm text-gray-600 dark:text-white/70">
                 {t("securityDesc")}
               </p>
             </div>
