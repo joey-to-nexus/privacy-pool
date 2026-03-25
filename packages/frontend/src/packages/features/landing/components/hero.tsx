@@ -100,32 +100,28 @@ export function Hero() {
           transition={{ delay: 1.1, duration: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="/app">
-            <button className="btn-primary px-8 py-4 group relative overflow-hidden">
-              <span className="relative z-10 flex items-center gap-2">
-                {t("launchApp")}
-                <svg
-                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-            </button>
+          <Link href="/app" className="btn-primary px-8 py-4 group relative overflow-hidden">
+            <span className="relative z-10 flex items-center gap-2">
+              {t("launchApp")}
+              <svg
+                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
           </Link>
 
-          <Link href="/docs">
-            <button className="px-8 py-4 border-2 transition-all duration-300 border-amber-600 text-amber-600 hover:bg-amber-600/10 dark:border-amber-400 dark:text-amber-400 dark:hover:bg-amber-400/10">
-              {t("readDocs")}
-            </button>
+          <Link href="/docs" className="px-8 py-4 border-2 transition-all duration-300 border-amber-600 text-amber-600 hover:bg-amber-600/10 dark:border-amber-400 dark:text-amber-400 dark:hover:bg-amber-400/10">
+            {t("readDocs")}
           </Link>
         </motion.div>
       </div>
